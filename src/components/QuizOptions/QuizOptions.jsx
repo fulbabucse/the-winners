@@ -1,10 +1,21 @@
 import React from "react";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-const QuizOptions = ({ option }) => {
+const QuizOptions = ({ option, correctAnswer }) => {
   const optionStyles = {
     fontFamily: "Hind Siliguri",
     fontWeight: "500",
   };
+
+  const answer = (e) => {
+    if (e === correctAnswer) {
+      toast("Correct Answer!");
+    } else {
+      toast("Incorrect Answer!");
+    }
+  };
+
   return (
     <div className="border border-solid flex items-center p-3 rounded-lg">
       <label className="label cursor-pointer gap-2">
@@ -12,9 +23,12 @@ const QuizOptions = ({ option }) => {
           type="radio"
           name="radio-6"
           className="radio checked:bg-emerald-300"
-          checked
         />
-        <span style={optionStyles} className="label-text text-base">
+        <span
+          onClick={(e) => answer(e.target.innerText)}
+          style={optionStyles}
+          className="label-text text-base"
+        >
           {option}
         </span>
       </label>
