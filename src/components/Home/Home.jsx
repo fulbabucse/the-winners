@@ -1,9 +1,10 @@
 import React from "react";
+import Topics from "../Topics/Topics";
 
 const Home = () => {
   return (
     <div>
-      <h1>This is Home pages</h1>
+      <Topics></Topics>
     </div>
   );
 };
