@@ -36,17 +36,45 @@ const Navbar = () => {
           >
             <ul className="items-center justify-center  md:flex md:space-y-0">
               <li className="nav-items">
-                <NavLink to="/home">Home</NavLink>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "activeRoutes" : undefined
+                  }
+                  to="/home"
+                >
+                  Home
+                </NavLink>
               </li>
 
               <li className="nav-items">
-                <NavLink to="/topics">Topics</NavLink>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "activeRoutes" : undefined
+                  }
+                  to="/topics"
+                >
+                  Topics
+                </NavLink>
               </li>
               <li className="nav-items">
-                <NavLink to="/statistics">Statistics</NavLink>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "activeRoutes" : undefined
+                  }
+                  to="/statistics"
+                >
+                  Statistics
+                </NavLink>
               </li>
               <li className="nav-items">
-                <NavLink to="/blog">Blog</NavLink>
+                <NavLink
+                  className={({ isActive }) =>
+                    isActive ? "activeRoutes" : undefined
+                  }
+                  to="/blog"
+                >
+                  Blog
+                </NavLink>
               </li>
             </ul>
           </div>

@@ -49,3 +49,7 @@
   left: 0;
   right: auto;
 }
+
+.activeRoutes {
+  border-bottom: 2px solid var(--primary-color);
+}
