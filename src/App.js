@@ -26,7 +26,11 @@ function App() {
           loader: QuizData,
           element: <Topics></Topics>,
         },
-        { path: "/statistics", element: <Statistics></Statistics> },
+        {
+          path: "/statistics",
+          loader: QuizData,
+          element: <Statistics></Statistics>,
+        },
         { path: "/blog", element: <Blog></Blog> },
         {
           path: "/topics/:id",

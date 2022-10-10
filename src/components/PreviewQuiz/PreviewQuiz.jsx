@@ -14,7 +14,9 @@ const PreviewQuiz = ({ questionData }) => {
     <div>
       <div className="card bg-base-100 shadow-xl p-5">
         <div className="flex justify-between items-center text-emerald-400">
-          <h1 className="mb-2 text-lg  font-semibold">{question}</h1>
+          <h1 className="mb-2 text-lg  font-semibold">
+            <strong>Question:</strong> {question}
+          </h1>
           <button onClick={() => alertAnswer()}>
             <FontAwesomeIcon className="text-xl" icon={faEye}></FontAwesomeIcon>
           </button>
@@ -29,18 +31,7 @@ const PreviewQuiz = ({ questionData }) => {
           ))}
         </div>
       </div>
-      <ToastContainer
-        position="top-right"
-        autoClose={3000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-      />
+      <ToastContainer />
     </div>
   );
 };
