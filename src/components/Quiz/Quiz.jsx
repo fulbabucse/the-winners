@@ -6,11 +6,11 @@ const Quiz = () => {
   const quizes = useLoaderData().data;
   const { id, name, questions, total } = quizes;
   return (
-    <div className="px-4 mx-auto lg:max-w-7xl md:px-8 mt-10">
+    <div className="px-4 mx-auto lg:max-w-7xl md:px-8 my-10">
       <div className="text-center my-10">
         <h1 className="text-2xl text-emerald-400 font-bold">Quiz of {name}</h1>
       </div>
-      <div className="w-full px-3 mx-auto md:w-2/4">
+      <div className="w-full px-3 mx-auto md:w-2/4 grid grid-cols-1 gap-7">
         {questions.map((question) => (
           <PreviewQuiz key={question.id} questionData={question}></PreviewQuiz>
         ))}
