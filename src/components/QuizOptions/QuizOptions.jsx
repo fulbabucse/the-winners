@@ -8,8 +8,8 @@ const QuizOptions = ({ option, correctAnswer }) => {
     fontWeight: "500",
   };
 
-  const answer = (e) => {
-    if (e === correctAnswer) {
+  const answer = (quizOption) => {
+    if (quizOption === correctAnswer) {
       toast("Correct Answer!");
     } else {
       toast("Incorrect Answer!");
@@ -25,7 +25,7 @@ const QuizOptions = ({ option, correctAnswer }) => {
           className="radio checked:bg-emerald-300"
         />
         <span
-          onClick={(e) => answer(e.target.innerText)}
+          onClick={() => answer(option)}
           style={optionStyles}
           className="label-text text-base"
         >

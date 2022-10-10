@@ -4,7 +4,7 @@ import PreviewQuiz from "../PreviewQuiz/PreviewQuiz";
 
 const Quiz = () => {
   const quizes = useLoaderData().data;
-  const { id, name, questions, total } = quizes;
+  const { name, questions } = quizes;
   return (
     <div className="px-4 mx-auto lg:max-w-7xl md:px-8 my-10">
       <div className="text-center my-10">

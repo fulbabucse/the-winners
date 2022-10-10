@@ -6,8 +6,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const PreviewQuiz = ({ questionData }) => {
-  const { id, correctAnswer, options, question } = questionData;
-  //   console.log(questionData);
+  const { correctAnswer, options, question } = questionData;
   const alertAnswer = () => {
     toast(correctAnswer);
   };
