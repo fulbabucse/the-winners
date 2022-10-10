@@ -16,13 +16,13 @@ const Navbar = () => {
             </NavLink>
             <div className="md:hidden">
               <button
-                className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
+                className="p-2 text-gray-700 rounded-md outline-none focus:border-emerald-400 focus:border"
                 onClick={() => setNavbar(!navbar)}
               >
                 {navbar ? (
-                  <XMarkIcon className="w-6 h-6 text-white"></XMarkIcon>
+                  <XMarkIcon className="w-6 h-6 text-emerald-400"></XMarkIcon>
                 ) : (
-                  <Bars3BottomRightIcon className="w-6 h-6 text-white"></Bars3BottomRightIcon>
+                  <Bars3BottomRightIcon className="w-6 h-6 text-emerald-400"></Bars3BottomRightIcon>
                 )}
               </button>
             </div>
