@@ -9,14 +9,14 @@ const Topic = ({ topic }) => {
         <figure className="bg-emerald-100">
           <img src={logo} alt={name} />
         </figure>
-        <div className="card-body text-emerald-500 w-full">
+        <div className="card-body text-emerald-400 w-full">
           <div className="flex justify-between items-center w-full">
             <h1 className="text-xl font-semibold ">{name}</h1>
             <h4>Total Quiz: {total}</h4>
           </div>
           <div className="card-actions justify-center">
             <Link to={`/topics/${id}`}>
-              <button className="btn btn-sm btn-info rounded-md font-semibold bg-emerald-500 text-white ">
+              <button className="btn btn-sm btn-info rounded-md font-semibold bg-emerald-400 text-white ">
                 Start Practice
               </button>
             </Link>
