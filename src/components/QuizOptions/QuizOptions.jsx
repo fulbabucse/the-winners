@@ -2,7 +2,7 @@ import React from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const QuizOptions = ({ option, correctAnswer }) => {
+const QuizOptions = ({ option, correctAnswer, questionData }) => {
   const optionStyles = {
     fontFamily: "Hind Siliguri",
     fontWeight: "500",
@@ -22,7 +22,7 @@ const QuizOptions = ({ option, correctAnswer }) => {
         <label className="label cursor-pointer gap-2">
           <input
             type="radio"
-            name="radio-6"
+            name={questionData.id}
             className="radio checked:bg-emerald-300"
           />
           <span

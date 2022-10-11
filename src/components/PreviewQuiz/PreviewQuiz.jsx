@@ -5,17 +5,21 @@ import { faEye } from "@fortawesome/free-solid-svg-icons";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const PreviewQuiz = ({ questionData }) => {
+const PreviewQuiz = ({ questionData, questions }) => {
   const { correctAnswer, options, question } = questionData;
   const alertAnswer = () => {
     toast(correctAnswer);
   };
+  // console.log(questionData);
+  // console.log(questions.indexOf(question));
+
   return (
     <div>
       <div className="card bg-base-100 shadow-xl p-5">
         <div className="flex justify-between items-center text-emerald-400">
           <h1 className="mb-2 text-lg  font-semibold">
-            <strong>Question:</strong> {question}
+            <strong>Question: </strong>
+            {question}
           </h1>
           <abbr title="Show the correct answer">
             <button onClick={() => alertAnswer()}>
@@ -32,6 +36,7 @@ const PreviewQuiz = ({ questionData }) => {
               key={idx}
               option={option}
               correctAnswer={correctAnswer}
+              questionData={questionData}
             ></QuizOptions>
           ))}
         </div>
