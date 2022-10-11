@@ -34,6 +34,7 @@ function App() {
         { path: "/blog", element: <Blog></Blog> },
         {
           path: "/topics/:id",
+          errorElement: <Error></Error>,
           loader: async ({ params }) =>
             fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`),
           element: <Quiz></Quiz>,
