@@ -21,8 +21,8 @@ const QuizOptions = ({ option, correctAnswer }) => {
       <div className="form-control">
         <label className="label cursor-pointer gap-2">
           <input
-            type="checkbox"
-            name="checkbox"
+            type="radio"
+            name="radio-6"
             className="radio checked:bg-emerald-300"
           />
           <span
