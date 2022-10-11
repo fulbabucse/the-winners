@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -17,7 +19,11 @@ const Topic = ({ topic }) => {
           <div className="card-actions justify-center">
             <Link to={`/topics/${id}`}>
               <button className="btn btn-sm btn-info rounded-md font-semibold bg-emerald-400 text-white ">
-                Start Practice
+                Start Test
+                <FontAwesomeIcon
+                  className="mx-1"
+                  icon={faArrowRight}
+                ></FontAwesomeIcon>
               </button>
             </Link>
           </div>

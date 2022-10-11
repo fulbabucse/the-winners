@@ -17,11 +17,16 @@ const PreviewQuiz = ({ questionData }) => {
           <h1 className="mb-2 text-lg  font-semibold">
             <strong>Question:</strong> {question}
           </h1>
-          <button onClick={() => alertAnswer()}>
-            <FontAwesomeIcon className="text-xl" icon={faEye}></FontAwesomeIcon>
-          </button>
+          <abbr title="Show the correct answer">
+            <button onClick={() => alertAnswer()}>
+              <FontAwesomeIcon
+                className="text-xl"
+                icon={faEye}
+              ></FontAwesomeIcon>
+            </button>
+          </abbr>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
           {options.map((option, idx) => (
             <QuizOptions
               key={idx}

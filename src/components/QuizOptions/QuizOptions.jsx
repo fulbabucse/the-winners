@@ -17,7 +17,7 @@ const QuizOptions = ({ option, correctAnswer }) => {
   };
 
   return (
-    <div className="border border-solid flex items-center p-3 rounded-lg">
+    <div className="border border-solid flex items-center p-3 rounded-lg hover:bg-emerald-200/50">
       <div className="form-control">
         <label className="label cursor-pointer gap-2">
           <input
@@ -28,7 +28,7 @@ const QuizOptions = ({ option, correctAnswer }) => {
           <span
             onClick={() => answer(option)}
             style={optionStyles}
-            className="label-text text-base"
+            className="label-text text-base text-emerald-500"
           >
             {option}
           </span>
