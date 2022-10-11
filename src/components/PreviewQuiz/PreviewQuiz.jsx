@@ -3,7 +3,6 @@ import React from "react";
 import QuizOptions from "../QuizOptions/QuizOptions";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
 import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
 const PreviewQuiz = ({ questionData, idx }) => {
   const { correctAnswer, options, question } = questionData;
